@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }

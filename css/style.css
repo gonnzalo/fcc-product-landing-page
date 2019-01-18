@@ -4,12 +4,44 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
 
 body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.6; }
 
-.container {
+.wrapper-nav {
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  text-decoration: none;
+  letter-spacing: 6px;
+  color: #222; }
+
+.nav-bar ul {
+  display: flex; }
+  .nav-bar ul li {
+    list-style-type: none; }
+    .nav-bar ul li a {
+      text-decoration: none;
+      display: block;
+      padding: 1em;
+      margin-left: 3em;
+      color: #222;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      transition: 0.3s; }
+      .nav-bar ul li a:hover {
+        background: #2cc46c; }
+
+#header {
+  background-color: #2ecc71; }
+
+.logo {
+  text-transform: uppercase; }

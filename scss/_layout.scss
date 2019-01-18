@@ -1,4 +1,37 @@
 .container {
+}
+
+.wrapper-nav {
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  letter-spacing: 6px;
+  color: #222;
+}
+
+.nav-bar ul {
+  display: flex;
+  & li {
+    list-style-type: none;
+
+    & a {
+      text-decoration: none;
+      display: block;
+      padding: 1em;
+      margin-left: 3em;
+      color: #222;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      transition: 0.3s;
+      &:hover {
+        background: darken(#2ecc71, 2%);
+      }
+    }
+  }
 }

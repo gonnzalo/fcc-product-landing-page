@@ -8,40 +8,75 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <header id="header">
-        <div class="wrapper-nav">
-          <a href="#" class="logo"><h2>logo</h2></a>
-          <nav id="nav-bar" class="nav-bar">
-            <ul>
-              <li><a href="#">home</a></li>
-              <li><a href="#">about</a></li>
-              <li><a href="#">contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-      <section id="section-front">
-        <p>
+    <header id="header">
+      <div class="wrapper-nav">
+        <a href="#" class="logo"><h2>kaffe</h2></a>
+        <nav id="nav-bar" class="nav-bar">
+          <ul>
+            <li><a href="#section-front" class="nav-link">home</a></li>
+            <li><a href="#section-work" class="nav-link">work</a></li>
+            <li><a href="#section-contact" class="nav-link">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="section-front">
+      <div class="welcome">
+        <h1>kaffe</h1>
+        <p>Cafe Interiors Desing</p>
+      </div>
+      <!-- <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi incidunt, perferendis
           deleniti veritatis velit commodi doloremque quisquam modi ut magnam nesciunt dolorem
           tempora debitis vero accusamus ipsa impedit. Officiis, sed?
-        </p>
-      </section>
-      <section id="section-about">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis provident laborum
-          assumenda beatae fuga autem quos, harum, ipsam cupiditate maxime exercitationem iure?
-          Perspiciatis alias tempore nobis odit ullam? Magnam, cumque.
-        </p>
-      </section>
-      <section id="newsletter">
-        <form action="#">
-          <input type="email" name="email" placeholder="Enter your email..." />
-          <input type="submit" value="Subscribe" id="submit" />
-        </form>
-      </section>
-      <footer></footer>
-    </div>
+        </p> -->
+    </section>
+
+    <section id="section-work">
+      <h1>Our Work</h1>
+      <!-- <div class="container-img">
+        <img
+          src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
+          alt=""
+        />
+
+        <img
+          src="https://images.unsplash.com/photo-1484659619207-9165d119dafe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+          alt=""
+        />
+
+        <img
+          src="https://images.unsplash.com/photo-1516832779604-54bee05bbc95?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+          alt=""
+        />
+      </div> -->
+      <!-- <div class="iframe-container">
+        <iframe width="" height="" src="https://www.youtube.com/embed/KgQXmecomWM"> </iframe>
+      </div> -->
+    </section>
+
+    <section id="section-contact">
+      <h1>Contact Us</h1>
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <label for="name">Name:</label>
+        <input type="name" name="name" placeholder="Enter your name" />
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Enter your email" id="email" />
+        <label for="textarea" class="left-col impro">Leave a comment:</label>
+        <textarea
+          cols="20"
+          rows="3"
+          name="textarea"
+          id="textarea"
+          placeholder="Enter you comment"
+        ></textarea>
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </section>
+
+    <footer></footer>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>

@@ -1,10 +1,39 @@
 const navbar = document.getElementById('header');
+const links = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
+
+
 
 function navColor() {
-    if (this.scrollY < 10) {
+    let topSection = window.scrollY + 50;
+    sections.forEach((section, i) => {
+        if (i < 2) {
+            if(topSection> section.offsetTop && topSection< sections[i+1].offsetTop) {
+                links[i].classList.add('active');
+            } else {
+                links[i].classList.remove('active');
+            }
+        } else if (topSection>= sections[2].offsetTop) {     
+            links[2].classList.add('active');
+         } else {
+            links[i].classList.remove('active');
+         }  
+    });
+    if (window.scrollY < 10) {
         navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
-    } else {navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';}
-    
+    } else {navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';}
 };
 
+links.forEach(link => link.addEventListener('click', linkColor));
 window.addEventListener('scroll', navColor);
+
+function linkColor(e) { 
+    let active = e.target;
+    for (key of links) {
+        if(key !== e.target) {
+            key.classList.remove('active');
+        } 
+    }
+    active.classList.add('active');
+}
+

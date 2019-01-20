@@ -14,3 +14,10 @@ body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
 }
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}

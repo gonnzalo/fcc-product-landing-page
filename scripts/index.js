@@ -2,10 +2,8 @@ const navbar = document.getElementById('header');
 const links = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
-
-
 function navColor() {
-    let topSection = window.scrollY + 50;
+    let topSection = window.scrollY + 250;
     sections.forEach((section, i) => {
         if (i < 2) {
             if(topSection> section.offsetTop && topSection< sections[i+1].offsetTop) {
@@ -24,16 +22,18 @@ function navColor() {
     } else {navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';}
 };
 
-links.forEach(link => link.addEventListener('click', linkColor));
-window.addEventListener('scroll', navColor);
-
 function linkColor(e) { 
     let active = e.target;
     for (key of links) {
         if(key !== e.target) {
             key.classList.remove('active');
+            navbar.style.backgroundColor = 'rgba(47, 54, 64, 0.8)';
         } 
     }
     active.classList.add('active');
 }
+
+
+links.forEach(link => link.addEventListener('click', linkColor));
+window.addEventListener('scroll', navColor);
 

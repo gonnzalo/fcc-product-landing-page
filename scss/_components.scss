@@ -1,8 +1,9 @@
 #header {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(47, 54, 64, 0.4);
   position: fixed;
   width: 100%;
   transition: 0.3s;
+  z-index: 10;
 }
 
 .logo {
@@ -23,6 +24,18 @@
   }
   & p {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5rem;
+  }
+}
+
+.fab {
+  font-size: 4rem;
+  margin: 0 1rem;
+  color: #2f3640;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
   }
 }

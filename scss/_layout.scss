@@ -13,6 +13,11 @@
   }
 }
 
+.test {
+  position: relative;
+  top: -50px;
+}
+
 .nav-bar ul {
   display: flex;
   & li {
@@ -23,7 +28,7 @@
       display: block;
       padding: 1em;
       margin-left: 3em;
-      color: rgba(255, 255, 255, 0.918);
+      color: rgb(255, 255, 255);
       font-size: 0.9rem;
       font-weight: 500;
       letter-spacing: 1.5px;
@@ -35,6 +40,7 @@
       }
       &:hover {
         transform: translateY(-1px);
+        color: rgb(235, 235, 99);
       }
     }
   }
@@ -70,19 +76,63 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, 10vh);
     grid-gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 8rem;
 
-    & > img {
+    & > div > a > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 3px;
+      // border-radius: 3px;
+      // box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
+      // transition: 0.3s;
+
+      // &:hover {
+      //   transform: translateY(-3px);
+      //   opacity: 0.85;
+      // }
+    }
+
+    & .hover-effect {
+      overflow: hidden;
+      position: relative;
       box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
-      transition: 0.3s;
+      border-radius: 3px;
+      transition: 0.4s;
 
       &:hover {
         transform: translateY(-3px);
-        opacity: 0.85;
+      }
+      & .overlay {
+        position: absolute;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: all 0.4s ease-in-out 0s;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        & h1 {
+          color: #fff;
+          font-size: 2rem;
+          border-top: 2px solid ghostwhite;
+          border-bottom: 2px solid ghostwhite;
+          padding: 1rem 0;
+          line-height: 1.6;
+          letter-spacing: 0.5rem;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          margin-top: -60px;
+        }
       }
     }
 
@@ -109,10 +159,15 @@
 }
 
 #section-contact {
-  height: 80vh;
+  height: 80%;
   width: 100%;
   background-color: #fafafa;
-  border-top: 1px solid #cdd2d7;
+  // & hr {
+  //   color: #cdd2d7;
+  // }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & .contact-wrapper {
     width: 80%;
@@ -130,7 +185,6 @@
       letter-spacing: 0.3rem;
     }
     & #form {
-      margin-top: 7rem;
       max-width: 450px;
       display: flex;
       flex-direction: column;
@@ -138,7 +192,6 @@
       border-radius: 6px;
       background-color: #eceff1;
       box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-      margin-bottom: 3rem;
       font-size: 1.3rem;
 
       & h2 {
@@ -163,7 +216,7 @@
         background-color: transparent;
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         resize: none;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
         font-size: 1.3rem;
         transition: 0.3s;
         &:hover {
@@ -175,6 +228,7 @@
         margin: 0 auto;
         border: none;
         padding: 0.5rem 0.5rem;
+        margin-bottom: 0.5rem;
         border-radius: 25px;
         cursor: pointer;
         color: #fff;

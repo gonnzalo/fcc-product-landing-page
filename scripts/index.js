@@ -33,7 +33,6 @@ function linkColor(e) {
     active.classList.add('active');
 }
 
-
 links.forEach(link => link.addEventListener('click', linkColor));
 window.addEventListener('scroll', navColor);
 

@@ -13,11 +13,6 @@
   }
 }
 
-.test {
-  position: relative;
-  top: -50px;
-}
-
 .nav-bar ul {
   display: flex;
   & li {
@@ -55,6 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -55px;
 }
 
 #section-work {
@@ -68,29 +64,29 @@
     letter-spacing: 0.3rem;
   }
 
+  @media (max-width: 850px) {
+    & h2 {
+      font-size: 1.8rem;
+      padding: 2.8rem;
+    }
+  }
+
+  @media only screen and (min-width: 850px) and (max-width: 1250px) {
+    & h2 {
+      font-size: 2.5rem;
+      padding: 3rem;
+    }
+  }
+
   & .container-img {
     width: 85%;
     margin: 0 auto;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, 10vh);
+    grid-template-rows: repeat(8, 1fr);
     grid-gap: 1rem;
     margin-bottom: 8rem;
-
-    & > div > a > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      // border-radius: 3px;
-      // box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
-      // transition: 0.3s;
-
-      // &:hover {
-      //   transform: translateY(-3px);
-      //   opacity: 0.85;
-      // }
-    }
 
     & .hover-effect {
       overflow: hidden;
@@ -100,8 +96,15 @@
       transition: 0.4s;
 
       &:hover {
-        transform: translateY(-3px);
+        transform: scale(1.02);
       }
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
       & .overlay {
         position: absolute;
         text-align: center;
@@ -122,8 +125,9 @@
         & h1 {
           color: #fff;
           font-size: 2rem;
-          border-top: 2px solid ghostwhite;
-          border-bottom: 2px solid ghostwhite;
+          text-transform: uppercase;
+          border-top: 2px solid #fff;
+          border-bottom: 2px solid #fff;
           padding: 1rem 0;
           line-height: 1.6;
           letter-spacing: 0.5rem;
@@ -133,6 +137,45 @@
           right: 0;
           margin-top: -60px;
         }
+      }
+    }
+
+    @media only screen and (min-width: 850px) and (max-width: 1250px) {
+      grid-gap: 0.5rem;
+      .container-img--1 {
+        grid-column: 1/3;
+        grid-row: 4/9;
+      }
+
+      .container-img--2 {
+        grid-column: 1/3;
+        grid-row: 1/4;
+      }
+
+      .container-img--3 {
+        grid-column: 3/5;
+        grid-row: 4/9;
+      }
+
+      .container-img--4 {
+        grid-column: 3/5;
+        grid-row: 1/4;
+      }
+    }
+
+    @media (max-width: 850px) {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+
+      & .hover-effect > img {
+        width: 100%;
+        height: auto;
+      }
+
+      & .hover-effect:not(:first-child) > img {
+        margin-top: 20px;
       }
     }
 
@@ -162,19 +205,28 @@
   height: 80%;
   width: 100%;
   background-color: #fafafa;
-  // & hr {
-  //   color: #cdd2d7;
-  // }
   display: flex;
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 850px) {
+    height: 100%;
+    margin-top: -50px;
+  }
+
+  @media only screen and (min-width: 850px) and (max-width: 1250px) {
+    margin-top: -80px;
+  }
   & .contact-wrapper {
     width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width: 1250px) {
+      flex-wrap: wrap;
+    }
 
     & h2 {
       padding: 4rem 4rem 3rem 1rem;
@@ -184,15 +236,26 @@
       text-transform: uppercase;
       letter-spacing: 0.3rem;
     }
+
+    @media (max-width: 850px) {
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+
     & #form {
       max-width: 450px;
       display: flex;
       flex-direction: column;
-      padding: 1.5rem;
+      padding: 2.5rem;
       border-radius: 6px;
       background-color: #eceff1;
       box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
       font-size: 1.3rem;
+
+      @media (max-width: 850px) {
+        margin-bottom: 2rem;
+      }
 
       & h2 {
         margin-bottom: 1rem;
@@ -216,7 +279,7 @@
         background-color: transparent;
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         resize: none;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         font-size: 1.3rem;
         transition: 0.3s;
         &:hover {
@@ -247,13 +310,19 @@
     }
 
     & .contact-follow {
+      order: -1;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: row;
 
+      @media (max-width: 1250px) {
+        flex-direction: column;
+        margin-bottom: 3rem;
+      }
+
       & h2 {
-        padding: 4rem 4rem 4rem 4rem;
+        padding: 2rem 2rem 2rem 2rem;
       }
     }
   }
@@ -262,4 +331,11 @@
 footer {
   background-color: #2f3640;
   height: 20vh;
+
+  & p {
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20vh;
+  }
 }

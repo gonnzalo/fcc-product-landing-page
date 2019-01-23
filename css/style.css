@@ -12,7 +12,10 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
-  padding-top: 50px; }
+  padding-top: 55px; }
+  @media (max-width: 850px) {
+    body {
+      padding-top: 0px; } }
 
 img,
 embed,
@@ -38,10 +41,6 @@ body > section:before {
     font-size: 1.3rem;
     letter-spacing: 6px;
     color: rgba(255, 255, 255, 0.918); }
-
-.test {
-  position: relative;
-  top: -50px; }
 
 .nav-bar ul {
   display: flex; }
@@ -73,7 +72,8 @@ body > section:before {
   background-position: center;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: -55px; }
 
 #section-work h2 {
   text-align: center;
@@ -84,19 +84,25 @@ body > section:before {
   font-size: 3rem;
   letter-spacing: 0.3rem; }
 
+@media (max-width: 850px) {
+  #section-work h2 {
+    font-size: 1.8rem;
+    padding: 2.8rem; } }
+
+@media only screen and (min-width: 850px) and (max-width: 1250px) {
+  #section-work h2 {
+    font-size: 2.5rem;
+    padding: 3rem; } }
+
 #section-work .container-img {
   width: 85%;
   margin: 0 auto;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 10vh);
+  grid-template-rows: repeat(8, 1fr);
   grid-gap: 1rem;
   margin-bottom: 8rem; }
-  #section-work .container-img > div > a > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
   #section-work .container-img .hover-effect {
     overflow: hidden;
     position: relative;
@@ -104,7 +110,11 @@ body > section:before {
     border-radius: 3px;
     transition: 0.4s; }
     #section-work .container-img .hover-effect:hover {
-      transform: translateY(-3px); }
+      transform: scale(1.02); }
+    #section-work .container-img .hover-effect > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
     #section-work .container-img .hover-effect .overlay {
       position: absolute;
       text-align: center;
@@ -122,8 +132,9 @@ body > section:before {
       #section-work .container-img .hover-effect .overlay h1 {
         color: #fff;
         font-size: 2rem;
-        border-top: 2px solid ghostwhite;
-        border-bottom: 2px solid ghostwhite;
+        text-transform: uppercase;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
         padding: 1rem 0;
         line-height: 1.6;
         letter-spacing: 0.5rem;
@@ -132,6 +143,32 @@ body > section:before {
         left: 0;
         right: 0;
         margin-top: -60px; }
+  @media only screen and (min-width: 850px) and (max-width: 1250px) {
+    #section-work .container-img {
+      grid-gap: 0.5rem; }
+      #section-work .container-img .container-img--1 {
+        grid-column: 1/3;
+        grid-row: 4/9; }
+      #section-work .container-img .container-img--2 {
+        grid-column: 1/3;
+        grid-row: 1/4; }
+      #section-work .container-img .container-img--3 {
+        grid-column: 3/5;
+        grid-row: 4/9; }
+      #section-work .container-img .container-img--4 {
+        grid-column: 3/5;
+        grid-row: 1/4; } }
+  @media (max-width: 850px) {
+    #section-work .container-img {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: auto; }
+      #section-work .container-img .hover-effect > img {
+        width: 100%;
+        height: auto; }
+      #section-work .container-img .hover-effect:not(:first-child) > img {
+        margin-top: 20px; } }
   #section-work .container-img--1 {
     grid-column: 1/3;
     grid-row: 1/9; }
@@ -152,12 +189,22 @@ body > section:before {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 850px) {
+    #section-contact {
+      height: 100%;
+      margin-top: -50px; } }
+  @media only screen and (min-width: 850px) and (max-width: 1250px) {
+    #section-contact {
+      margin-top: -80px; } }
   #section-contact .contact-wrapper {
     width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center; }
+    @media (max-width: 1250px) {
+      #section-contact .contact-wrapper {
+        flex-wrap: wrap; } }
     #section-contact .contact-wrapper h2 {
       padding: 4rem 4rem 3rem 1rem;
       color: #293347;
@@ -165,15 +212,21 @@ body > section:before {
       font-size: 2rem;
       text-transform: uppercase;
       letter-spacing: 0.3rem; }
+    @media (max-width: 850px) {
+      #section-contact .contact-wrapper h2 {
+        font-size: 1.8rem; } }
     #section-contact .contact-wrapper #form {
       max-width: 450px;
       display: flex;
       flex-direction: column;
-      padding: 1.5rem;
+      padding: 2.5rem;
       border-radius: 6px;
       background-color: #eceff1;
       box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
       font-size: 1.3rem; }
+      @media (max-width: 850px) {
+        #section-contact .contact-wrapper #form {
+          margin-bottom: 2rem; } }
       #section-contact .contact-wrapper #form h2 {
         margin-bottom: 1rem;
         text-align: center;
@@ -191,7 +244,7 @@ body > section:before {
         background-color: transparent;
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         resize: none;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         font-size: 1.3rem;
         transition: 0.3s; }
         #section-contact .contact-wrapper #form input:hover,
@@ -217,16 +270,26 @@ body > section:before {
           opacity: 0.85;
           transform: translateY(-2px); }
     #section-contact .contact-wrapper .contact-follow {
+      order: -1;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: row; }
+      @media (max-width: 1250px) {
+        #section-contact .contact-wrapper .contact-follow {
+          flex-direction: column;
+          margin-bottom: 3rem; } }
       #section-contact .contact-wrapper .contact-follow h2 {
-        padding: 4rem 4rem 4rem 4rem; }
+        padding: 2rem 2rem 2rem 2rem; }
 
 footer {
   background-color: #2f3640;
   height: 20vh; }
+  footer p {
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20vh; }
 
 #header {
   background-color: rgba(47, 54, 64, 0.4);
@@ -247,13 +310,26 @@ footer {
   padding: 30px 50px;
   background-color: rgba(0, 0, 0, 0.6); }
   .welcome h1 {
-    font-size: 2.5rem;
-    letter-spacing: 8px;
+    font-size: 3.5rem;
+    letter-spacing: 15px;
     text-transform: uppercase;
     text-align: center; }
   .welcome p {
     text-align: center;
-    font-size: 1.5rem; }
+    font-size: 2rem;
+    letter-spacing: 3px; }
+  @media (max-width: 850px) {
+    .welcome {
+      max-width: 70%; }
+      .welcome h1 {
+        font-size: 2.2rem; }
+      .welcome p {
+        font-size: 1.5rem; } }
+  @media only screen and (min-width: 850px) and (max-width: 1250px) {
+    .welcome h1 {
+      font-size: 3rem; }
+    .welcome p {
+      font-size: 1.6rem; } }
 
 .fab {
   font-size: 4rem;
@@ -264,3 +340,6 @@ footer {
   .fab:hover {
     transform: translateY(-2px);
     opacity: 0.85; }
+  @media (max-width: 850px) {
+    .fab {
+      font-size: 3.5rem; } }

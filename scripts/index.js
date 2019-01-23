@@ -3,10 +3,10 @@ const links = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
 function navColor() {
-    let topSection = window.scrollY + 250;
+    let topSection = window.scrollY + 55;
     sections.forEach((section, i) => {
         if (i < 2) {
-            if(topSection> section.offsetTop && topSection< sections[i+1].offsetTop) {
+            if(topSection > section.offsetTop && topSection < sections[i+1].offsetTop) {
                 links[i].classList.add('active');
             } else {
                 links[i].classList.remove('active');

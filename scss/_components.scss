@@ -19,14 +19,37 @@
   padding: 30px 50px;
   background-color: rgba(0, 0, 0, 0.6);
   & h1 {
-    font-size: 2.5rem;
-    letter-spacing: 8px;
+    font-size: 3.5rem;
+    letter-spacing: 15px;
     text-transform: uppercase;
     text-align: center;
   }
   & p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  @media (max-width: 850px) {
+    max-width: 70%;
+
+    & h1 {
+      font-size: 2.2rem;
+    }
+
+    & p {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 850px) and (max-width: 1250px) {
+    & h1 {
+      font-size: 3rem;
+    }
+
+    & p {
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -39,5 +62,9 @@
   &:hover {
     transform: translateY(-2px);
     opacity: 0.85;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 3.5rem;
   }
 }

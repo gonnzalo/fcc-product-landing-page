@@ -15,6 +15,7 @@
 
 .nav-bar ul {
   display: flex;
+  top: 0;
   & li {
     list-style-type: none;
 
@@ -56,7 +57,7 @@
 #section-work {
   & h2 {
     text-align: center;
-    padding: 8rem;
+    padding: 6rem;
     text-transform: uppercase;
     color: #293347;
     font-weight: 800;

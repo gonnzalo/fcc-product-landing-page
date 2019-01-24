@@ -6,6 +6,15 @@
   height: 55px;
   transition: 0.3s;
   z-index: 10;
+  -webkit-animation: 1s fadein 0.5s forwards;
+  animation: 1s fadein 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
 }
 
 .logo {
@@ -18,6 +27,7 @@
   border-radius: 8px;
   padding: 30px 50px;
   background-color: rgba(0, 0, 0, 0.6);
+
   & h1 {
     font-size: 3.5rem;
     letter-spacing: 15px;
@@ -66,5 +76,27 @@
 
   @media (max-width: 850px) {
     font-size: 3.5rem;
+  }
+}
+
+.welcome {
+  opacity: 0;
+  margin-top: 100px;
+  -webkit-animation: 1s slidefade 0.8s forwards;
+  animation: 1s slidefade 0.8s forwards;
+}
+
+@keyframes slidefade {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  99% {
+    opacity: 1;
+    margin: 0;
+  }
+  100% {
+    margin: 0;
+    opacity: 1;
   }
 }

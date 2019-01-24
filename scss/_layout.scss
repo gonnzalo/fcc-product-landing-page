@@ -5,6 +5,73 @@
   justify-content: space-between;
   align-items: center;
 
+  & .navbar-toggle {
+    display: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.918);
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 90%;
+    .navbar-toggle {
+      display: inline;
+    }
+
+    .nav-bar ul {
+      width: 100%;
+      margin: 0rem;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+
+      & li > a {
+        margin: 0;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+
+    .nav-drop {
+      display: none;
+      list-style-type: none;
+    }
+
+    .nav-drop-active {
+      display: block;
+      -webkit-animation: fadeIn 0.5s;
+      animation: fadeIn 0.5s;
+
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+
+    .logo {
+      margin-top: 4px;
+      z-index: 999;
+    }
+
+    .navbar-toggle {
+      z-index: 999;
+    }
+  }
+
   & .logo {
     text-decoration: none;
     font-size: 1.3rem;
@@ -26,7 +93,7 @@
       margin-left: 3em;
       color: rgb(255, 255, 255);
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       transition: 0.5s;

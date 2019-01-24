@@ -1,6 +1,8 @@
 const navbar = document.getElementById('header');
 const links = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
+const navBarToggle = document.getElementById('js-navbar-toggle');
+const navDrop = document.getElementById('nav-drop');
 
 function navColor() {
     let topSection = window.scrollY + 55;
@@ -35,4 +37,8 @@ function linkColor(e) {
 
 links.forEach(link => link.addEventListener('click', linkColor));
 window.addEventListener('scroll', navColor);
+navBarToggle.addEventListener('click', function () {
+    navDrop.classList.toggle('nav-drop-active');
+    navBarToggle.classList.toggle('open');
+  });
 

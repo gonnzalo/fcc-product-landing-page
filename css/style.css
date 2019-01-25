@@ -32,10 +32,14 @@ body > section:before {
 
 .wrapper-nav {
   width: 80%;
+  height: 55px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media screen and (max-width: 420px) {
+    .wrapper-nav {
+      justify-content: flex-start; } }
   .wrapper-nav .navbar-toggle {
     display: none;
     cursor: pointer;
@@ -59,10 +63,11 @@ body > section:before {
           font-weight: 600; }
       .wrapper-nav .nav-drop {
         display: block;
-        top: -220px;
-        transition: top 0.6s ease-out; }
+        left: -250px;
+        top: 54px;
+        transition: left 0.6s ease-out; }
       .wrapper-nav .nav-drop-active {
-        top: 54px; }
+        left: 0; }
       .wrapper-nav .logo {
         margin-top: 4px;
         z-index: 999; }
@@ -73,6 +78,9 @@ body > section:before {
     font-size: 1.3rem;
     letter-spacing: 6px;
     color: rgba(255, 255, 255, 0.918); }
+    @media screen and (max-width: 420px) {
+      .wrapper-nav .logo {
+        font-size: 1rem; } }
 
 .nav-bar ul {
   display: flex;
@@ -340,25 +348,15 @@ body > section:before {
 
 footer {
   background-color: #2f3640;
-  height: 20vh; }
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   footer p {
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 20vh; }
+    color: #fff; }
   @media screen and (max-width: 420px) {
-    footer {
-      height: auto;
-      width: 70%;
-      margin: 0 auto; }
-      footer p {
-        text-align: center;
-        margin-left: 0;
-        padding-left: 0;
-        float: none;
-        line-height: 20px;
-        padding: 2rem 0;
-        font-size: 0.9rem; } }
+    footer p {
+      font-size: 0.8rem; } }
 
 #header {
   background-color: rgba(22, 2, 22, 0.4);
@@ -454,7 +452,7 @@ footer {
 
 #js-navbar-toggle {
   width: 60px;
-  height: 45px;
+  height: 53px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -468,12 +466,11 @@ footer {
   #js-navbar-toggle span {
     display: block;
     position: absolute;
-    height: 3px;
-    width: 40px;
+    height: 2px;
+    width: 30px;
     background: rgba(255, 255, 255, 0.918);
     border-radius: 9px;
     opacity: 1;
-    left: 10;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);

@@ -1,9 +1,14 @@
 .wrapper-nav {
   width: 80%;
+  height: 55px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 420px) {
+    justify-content: flex-start;
+  }
 
   & .navbar-toggle {
     display: none;
@@ -35,12 +40,13 @@
 
     .nav-drop {
       display: block;
-      top: -220px;
-      transition: top 0.6s ease-out;
+      left: -250px;
+      top: 54px;
+      transition: left 0.6s ease-out;
     }
 
     .nav-drop-active {
-      top: 54px;
+      left: 0;
       // display: block;
       // -webkit-animation: fadeIn 0.5s;
       // animation: fadeIn 0.5s;
@@ -78,6 +84,10 @@
     font-size: 1.3rem;
     letter-spacing: 6px;
     color: rgba(255, 255, 255, 0.918);
+
+    @media screen and (max-width: 420px) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -428,27 +438,18 @@
 
 footer {
   background-color: #2f3640;
-  height: 20vh;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & p {
     color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 20vh;
   }
 
   @media screen and (max-width: 420px) {
-    height: auto;
-    width: 70%;
-    margin: 0 auto;
     & p {
-      text-align: center;
-      margin-left: 0;
-      padding-left: 0;
-      float: none;
-      line-height: 20px;
-      padding: 2rem 0;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
 }

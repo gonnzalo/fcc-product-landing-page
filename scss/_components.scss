@@ -1,5 +1,5 @@
 #header {
-  background-color: rgba(47, 54, 64, 0.4);
+  background-color: rgba(22, 2, 22, 0.4);
   position: fixed;
   top: 0;
   width: 100%;
@@ -9,6 +9,10 @@
   -webkit-animation: 1s fadein 0.5s forwards;
   animation: 1s fadein 0.5s forwards;
   opacity: 0;
+
+  @media screen and (max-width: 750px) {
+    background-color: rgba(22, 2, 22, 1);
+  }
 }
 
 @keyframes fadein {
@@ -38,6 +42,19 @@
     text-align: center;
     font-size: 2rem;
     letter-spacing: 3px;
+  }
+
+  @media screen and (max-width: 420px) {
+    max-width: 100%;
+    padding: 1rem 2rem;
+    & h1 {
+      font-size: 1.8rem;
+      letter-spacing: 10px;
+    }
+
+    & p {
+      font-size: 1rem;
+    }
   }
 
   @media (max-width: 850px) {
@@ -76,6 +93,10 @@
 
   @media (max-width: 850px) {
     font-size: 3.5rem;
+  }
+
+  @media screen and (max-width: 420px) {
+    font-size: 2.2rem;
   }
 }
 

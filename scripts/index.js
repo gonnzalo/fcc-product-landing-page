@@ -3,6 +3,7 @@ const links = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 const navBarToggle = document.getElementById('js-navbar-toggle');
 const navDrop = document.getElementById('nav-drop');
+const mediaquery = window.matchMedia( "(min-width: 750px)" );
 
 function navColor() {
     let topSection = window.scrollY + 55;
@@ -19,26 +20,32 @@ function navColor() {
             links[i].classList.remove('active');
          }  
     });
-    if (window.scrollY < 10) {
-        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
-    } else {navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';}
+
+    if (mediaquery.matches) {
+        if (window.scrollY < 10) {
+            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+        } else {navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';}
+    }
+   
 };
 
-function linkColor(e) { 
-    let active = e.target;
-    for (key of links) {
-        if(key !== e.target) {
-            key.classList.remove('active');
-            navbar.style.backgroundColor = 'rgba(47, 54, 64, 0.8)';
-        } 
-    }
-    active.classList.add('active');
-}
-
-links.forEach(link => link.addEventListener('click', linkColor));
 window.addEventListener('scroll', navColor);
 navBarToggle.addEventListener('click', function () {
     navDrop.classList.toggle('nav-drop-active');
     navBarToggle.classList.toggle('open');
   });
 
+// function linkColor(e) { 
+//     if (mediaquery.matches) {
+//     let active = e.target;
+//     for (key of links) {
+//         if(key !== e.target) {
+//             key.classList.remove('active');
+//             navbar.style.backgroundColor = 'rgba(22, 2, 22, 0.8)';
+//         } 
+//     }
+//     active.classList.add('active');
+//     }
+// }
+
+// links.forEach(link => link.addEventListener('click', linkColor));

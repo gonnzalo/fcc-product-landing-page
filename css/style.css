@@ -55,7 +55,7 @@ body > section:before {
         margin: 0rem;
         position: absolute;
         right: 0;
-        background-color: #160216; }
+        background-color: #181b21; }
         .wrapper-nav .nav-bar ul li > a {
           margin: 0;
           text-align: center;
@@ -348,10 +348,11 @@ body > section:before {
 
 footer {
   background-color: #2f3640;
-  height: 200px;
+  height: 220px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column; }
   footer p {
     color: #fff; }
   @media screen and (max-width: 420px) {
@@ -359,7 +360,7 @@ footer {
       font-size: 0.8rem; } }
 
 #header {
-  background-color: rgba(22, 2, 22, 0.4);
+  background-color: rgba(24, 27, 33, 0.1);
   position: fixed;
   top: 0;
   width: 100%;
@@ -371,7 +372,7 @@ footer {
   opacity: 0; }
   @media screen and (max-width: 750px) {
     #header {
-      background-color: #160216; } }
+      background-color: #181b21; } }
 
 @keyframes fadein {
   100% {

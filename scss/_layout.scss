@@ -28,7 +28,7 @@
       margin: 0rem;
       position: absolute;
       right: 0;
-      background-color: rgba(22, 2, 22, 1);
+      background-color: rgb(24, 27, 33);
 
       & li > a {
         margin: 0;
@@ -47,26 +47,6 @@
 
     .nav-drop-active {
       left: 0;
-      // display: block;
-      // -webkit-animation: fadeIn 0.5s;
-      // animation: fadeIn 0.5s;
-
-      // @-webkit-keyframes fadeIn {
-      //   from {
-      //     opacity: 0;
-      //   }
-      //   to {
-      //     opacity: 1;
-      //   }
-      // }
-      // @keyframes fadeIn {
-      //   from {
-      //     opacity: 0;
-      //   }
-      //   to {
-      //     opacity: 1;
-      //   }
-      // }
     }
 
     .logo {
@@ -438,10 +418,11 @@
 
 footer {
   background-color: #2f3640;
-  height: 200px;
+  height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   & p {
     color: #fff;
